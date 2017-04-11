@@ -19,12 +19,7 @@ navigator.mediaDevices.enumerateDevices().then((mediaDevices) => {
     return
   }
 
-  var cameraFound = !!mediaDevices.filter((mediaDevice) => {
-    return mediaDevice.kind == 'videoinput'
-  }).length
-
   var constraints = {audio: micFound, video: cameraFound}
-
   // Capture visual & audio data from web camera and microphone.
   if(navigator.mediaDevices && navigator.mediaDevices.getUserMedia){
     // For browsers which adapts to new API (Firefox / Chrome 53 -)
