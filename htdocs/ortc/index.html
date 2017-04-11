@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Demo - ORTC</title>
+</head>
+<body>
+  <div id="container">
+    <div>Your ID: <span id="myId"></span></div>
+    <form action="" id="callingFrom">
+      <input type="text" id="calleeId" placeholder="Callee ID">
+      <button>call</button>
+    </form>
+    <button id="ringOff">bye</button>
+    <div>
+      <span id="myStream"></span>
+      <span id="stream"></span>
+    </div>
+  </div>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/common/initialize.js"></script>
+  <script src="/common/util.js"></script>
+  <script src="./client.js"></script>
+</body>
+</html>
